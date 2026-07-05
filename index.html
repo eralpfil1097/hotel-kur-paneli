@@ -1,6 +1,87 @@
-hotel-kur-paneli
-│
-├── index.html
-├── style.css
-├── script.js
-└── README.md
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Kur Paneli</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>💱 HOTEL KUR PANELİ</h1>
+
+<div id="updateTime">
+Son Güncelleme: --
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h2>🇺🇸 USD</h2>
+<p>Alış: <span id="usdBuy">-</span></p>
+<p>Satış: <span id="usdSell">-</span></p>
+</div>
+
+<div class="card">
+<h2>🇪🇺 EUR</h2>
+<p>Alış: <span id="eurBuy">-</span></p>
+<p>Satış: <span id="eurSell">-</span></p>
+</div>
+
+<div class="card">
+<h2>🇬🇧 GBP</h2>
+<p>Alış: <span id="gbpBuy">-</span></p>
+<p>Satış: <span id="gbpSell">-</span></p>
+</div>
+
+<div class="card">
+<h2>🇷🇺 RUB</h2>
+<p>Alış: <span id="rubBuy">-</span></p>
+<p>Satış: <span id="rubSell">-</span></p>
+</div>
+
+</div>
+
+<div class="calculator">
+
+<h2>Hesaplama</h2>
+
+<input
+id="amount"
+type="number"
+placeholder="Tutar Gir">
+
+<select id="currency">
+
+<option value="USD">USD</option>
+<option value="EUR">EUR</option>
+<option value="GBP">GBP</option>
+<option value="RUB">RUB</option>
+
+</select>
+
+<select id="direction">
+
+<option value="tlToFx">TL → Döviz</option>
+<option value="fxToTl">Döviz → TL</option>
+
+</select>
+
+<button onclick="calculate()">
+HESAPLA
+</button>
+
+<h2 id="result"></h2>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
